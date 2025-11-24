@@ -13,49 +13,75 @@
 
     <main>
         <section id="homescreen">
-            <h1></h1>
-            <div id="explore button"></div>
+            <h1 id="titlecard">Your 1# travel blog</h1>
+            <p id="explore_button">EXPLORE</p>
         </section>
 
 
         <section id="sec1">
-            <h1></h1>
-            <div class="sec1obj"></div>
-            <div class="sec1obj"></div>
-            <div class="sec1obj"></div>
-            <div class="sec1obj"></div>
-            <div class="sec1obj"></div>
-            <div class="sec1obj"></div>
+            <a href="https://www.google.com/" target="_blank" class="sec1obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="city" class="sec1img"><p class="sec1text"><strong>CITYNAME</strong></p></a>
+            <a href="https://www.google.com/" target="_blank" class="sec1obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="city" class="sec1img"><p class="sec1text"><strong>CITYNAME</strong></p></a>
+            <a href="https://www.google.com/" target="_blank" class="sec1obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="city" class="sec1img"><p class="sec1text"><strong>CITYNAME</strong></p></a>
+            <a href="https://www.google.com/" target="_blank" class="sec1obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="city" class="sec1img"><p class="sec1text"><strong>CITYNAME</strong></p></a>
+            <a href="https://www.google.com/" target="_blank" class="sec1obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="city" class="sec1img"><p class="sec1text"><strong>CITYNAME</strong></p></a>
+
+            
         </section>
 
         <section id="sec2">
-            <!-- "interactive globe" and textinfo about place to boot -->
+            
+            <div id="globe">
+                <canvas id="cobe" style="width: 500px; height: 500px;" width="1000" height="1000"></canvas>
+                <script type="module">
+                    import createGlobe from "https://cdn.skypack.dev/cobe";
+                    let phi = 0;
+                    let canvas = document.getElementById("cobe");
+                    const globe = createGlobe(canvas, {
+                        devicePixelRatio: 2,
+                        width: 1000,
+                        height: 1000,
+                        phi: 0,
+                        theta: 0,
+                        dark: 0,
+                        diffuse: 1.2,
+                        scale: 1,
+                        mapSamples: 20000,
+                        mapBrightness: 10,
+                        baseColor: [0.16,0.71,0.39],
+                        markerColor: [1, 0.5, 1],
+                        glowColor:[1,1,1],
+                        offset: [0, 0],
+                        markers: [{ location: [37.7595, -122.4367], size: 0.03 },{ location: [40.7128, -74.006], size: 0.1 }],
+                        onRender: (state) => {
+                         state.phi = phi;
+                         phi += 0.002;
+                        }
+                    });
+                </script>
+            </div>
+
         </section>
 
         <section id="sec3">
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
-            <div class="sec3obj"></div>
+            <h2>Populära resemål</h2>
+            
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            <div class="sec3obj"><img src="/img/0_pad7W7GB2AoLMvWE.jpg" alt="travel destination" class="sec3img"><h3>place name</h3><p class="sec3text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga aspernatur vel accusamus libero totam perferendis dolorum laudantium magnam sunt?</p><a href="https://www.google.com/" target="_blank"><p>läs mer</p></a></div>
+            
+            
         </section>
     </main>
     <footer></footer>
