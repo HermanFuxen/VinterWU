@@ -223,8 +223,6 @@ footer{
 
 #container{
     background-color: #ecf0f1;
-    
-    grid-template-areas:
 }
 
 #serchbar{
@@ -243,33 +241,54 @@ footer{
 
 
 #about{
-    grid-template-areas:"head""aboutsec0""aboutsec1""aboutsec2""foot";
+    grid-template-areas:"head""con""foot";
     grid-template-rows: auto auto auto auto auto;
+    background-color:#27ae60;
+}
+
+#abouttile{
+    display: inline-block;
+    font-size: 9vh;
+    width: 100%;
+    text-align: center;
+    color: darkgreen;
+    margin: 110px 0px 80px 0px;
 }
 
 .aboutsec{
     background-color: #ecf0f1;
     display: flex;
-    margin-bottom: 50px;
-    width: 100vw;
+    margin: 25px auto 120px auto;
+    width: 70vw;
 
-    justify-content: space-around;
+    padding: 10px;
+    border-color: rgb(220, 220, 220);
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
     
 }
 
-#a0{
-    grid-area: aboutsec0;
+.about_textbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    color: rgb(0, 60, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#a1{
-    grid-area: aboutsec1;
-}
-
-#a2{
-    grid-area: aboutsec2;
+#flip{
+    flex-direction: row-reverse;
 }
 
 .imga{
     display: block ;
     width: 30vw;
+    border-radius: 5px;
 }
+
+ .abouttext{
+    font-size: 13px;
+ }
